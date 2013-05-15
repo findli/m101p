@@ -1,3 +1,5 @@
 *.tar
 .idea
 *.pyc
+*.bson
+*.log
