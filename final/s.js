@@ -1,3 +1,4 @@
+mongorestore --drop -d enron -c messages /home/dloreto/dump/enron/messages.bson
 ////////////////////////////////////////////// Q1
 db.messages.find({
 	"headers.From" : "andrew.fastow@enron.com",
@@ -33,3 +34,7 @@ db.messages.aggregate([
 	$limit: 1
 }]);
 ////////////////////////////////////////////// Q3
+db.messages.update(
+	{"headers.Message-ID": "<8147308.1075851042335.JavaMail.evans@thyme>" },
+	{$push: {"headers.To": "mrpotatohead@10gen.com"}}
+	);
