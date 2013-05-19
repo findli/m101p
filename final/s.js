@@ -38,3 +38,19 @@ db.messages.update(
 	{"headers.Message-ID": "<8147308.1075851042335.JavaMail.evans@thyme>" },
 	{$push: {"headers.To": "mrpotatohead@10gen.com"}}
 	);
+////////////////////////////////////////////// Q4
+mongoimport --drop -d blog -c posts posts.json
+self.posts.update({"permalink": permalink}, {"$inc": {"comments.%s.num_likes" % comment_ordinal: 1}})
+////////////////////////////////////////////// Q5
+a_1_b_1
+a_1_c_1
+c_1
+a_1_b_1_c_-1
+////////////////////////////////////////////// Q6
+Set w=0, j=0 on writes
+Remove all indexes from the collection
+Build a replica set and insert data into the secondary nodes to free up the primary nodes.
+////////////////////////////////////////////// Q7
+mongoimport --drop -d pics -c albums albums.json
+mongoimport --drop -d pics -c images images.json
+
