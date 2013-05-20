@@ -53,4 +53,14 @@ Build a replica set and insert data into the secondary nodes to free up the prim
 ////////////////////////////////////////////// Q7
 mongoimport --drop -d pics -c albums albums.json
 mongoimport --drop -d pics -c images images.json
+20,278
+see q7.py
+////////////////////////////////////////////// Q8
+1
+////////////////////////////////////////////// Q9
+patient_id
+////////////////////////////////////////////// Q10
+The query did not utilize an index to figure out which documents match the find criteria.
+The query used an index for the sorting phase.
+The query performed a full collection scan
 
