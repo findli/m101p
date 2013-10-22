@@ -49,7 +49,7 @@ a_1_b_1_c_-1
 ////////////////////////////////////////////// Q6
 Set w=0, j=0 on writes
 Remove all indexes from the collection
-Build a replica set and insert data into the secondary nodes to free up the primary nodes.
+Build a replica set and insert data into the secondary nodes to free up the primary nodes. // this is wrong because you can write only in primary node
 ////////////////////////////////////////////// Q7
 mongoimport --drop -d pics -c albums albums.json
 mongoimport --drop -d pics -c images images.json
